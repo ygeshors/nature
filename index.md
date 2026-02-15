@@ -74,19 +74,6 @@ Partager des connaissances et des ressentis pour reconnecter chacun à la nature
 
 ---
 
-## 🌊 Terrains d’exploration
-
-<div class="justify">
-
-- Littoral méditerranéen et dunes naturelles  
-- Lagunes et zones humides  
-- Observations d’avifaune et comportements naturels  
-- Ambiances sauvages et photographie immersive
-
-</div>
-
----
-
 ## 🧭 Accès rapide
 
 <div class="vitrine">
@@ -97,13 +84,8 @@ Partager des connaissances et des ressentis pour reconnecter chacun à la nature
 </div>
 
 <div class="carte">
-<div class="titre">📸 Photographie nature</div>
+<div class="titre">📸 Photos</div>
 <a href="{{ "/photos/" | relative_url }}">Voir les images</a>
-</div>
-
-<div class="carte">
-<div class="titre">🚶 Sorties naturalistes</div>
-<a href="{{ "/sorties/" | relative_url }}">Consulter les sorties</a>
 </div>
 
 <div class="carte">
@@ -115,16 +97,5 @@ Partager des connaissances et des ressentis pour reconnecter chacun à la nature
 <div class="titre">📬 Contact</div>
 <a href="{{ "/contact/" | relative_url }}">Me contacter</a>
 </div>
-
-</div>
-
----
-
-## 🌱 Philosophie
-
-<div class="justify">
-
-Observer sans déranger, comprendre avant de juger, et partager pour mieux protéger.  
-Chaque sortie est une rencontre avec le vivant, chaque image une trace d’un instant fragile.
 
 </div>
