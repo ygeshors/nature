@@ -1,67 +1,78 @@
-/* ===== Yann Nature — Header PRO V2 (NO OVERLAP) ===== */
+/* ===== Yann Nature — V3 “cinéma” ===== */
 
-/* Full width (mais contenu centré) */
+/* Full width layout, contenu centré */
 .main-content-wrap { max-width: 100% !important; }
 .page-content { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
 
-/* Typo (Barlow) */
+/* Barlow */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
 body, .main-content, .page-content { font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
 
-/* ===== HERO ===== */
-.hero { margin: 18px 0 28px; }
+/* -------- CINEMA HERO -------- */
+.cinema{
+  margin: 0 0 26px;
+  padding: 14px 0 0;
+}
 
-/* Bannière seule (pas de texte dessus) */
-.hero-banner{
+/* bannière plein large, sans texte */
+.cinema-banner{
   width: 100%;
-  height: 260px;
+  height: clamp(220px, 34vw, 360px);
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 18px;
   display:block;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
 }
 
-/* Rangée sous la bannière */
-.hero-row{
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 18px;
-  align-items: start;
-  margin-top: 14px; /* ✅ tout est sous la bannière */
-}
-
-/* Logo en “badge” */
-.hero-logo{
-  background: #fff;
-  border-radius: 16px;
-  padding: 12px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
-  border: 1px solid rgba(0,0,0,.06);
-}
-.hero-logo img{
-  width: 100%;
-  max-width: 140px;   /* ✅ taille maîtrisée */
-  height: auto;
-  display:block;
+/* la carte se pose SOUS la bannière */
+.cinema-shell{
+  max-width: 1180px;
   margin: 0 auto;
+  padding: 0 18px;
 }
 
-/* Carte texte */
-.hero-card{
+.cinema-card{
+  margin-top: 14px;                 /* ✅ jamais sur la bannière */
   background: #fff;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 16px 18px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
-  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 16px 40px rgba(0,0,0,.10);
+  border: 1px solid rgba(0,0,0,.08);
+  display: grid;
+  grid-template-columns: 120px 1fr; /* ✅ logo cadré */
+  gap: 16px;
+  align-items: start;
 }
 
-.hero-title{
+/* logo : on FORCE une taille max */
+.cinema-logo{
+  width: 120px;
+  height: 120px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cinema-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* ✅ jamais “immense” */
+  display:block;
+}
+
+/* texte */
+.cinema-text h1{
   margin: 0 0 10px;
   font-weight: 700;
   line-height: 1.15;
   font-size: 28px;
 }
-.hero-sub{
+
+.cinema-sub{
   margin: 0 0 12px;
   font-size: 16px;
   line-height: 1.6;
@@ -69,8 +80,9 @@ body, .main-content, .page-content { font-family: "Barlow", system-ui, -apple-sy
   text-align: justify;
 }
 
-/* Boutons */
-.hero-cta{ display:flex; flex-wrap:wrap; gap:10px; }
+/* boutons */
+.cinema-cta{ display:flex; flex-wrap:wrap; gap:10px; }
+
 .btn{
   display:inline-block;
   padding: 10px 14px;
@@ -83,29 +95,29 @@ body, .main-content, .page-content { font-family: "Barlow", system-ui, -apple-sy
 .btn-light{ background:#fff; color:#14181f !important; }
 .btn-green{ background:#76c043; color:#fff !important; border-color: transparent; }
 
-/* Sections */
-.section{ margin: 26px 0; }
+/* sections */
 .lead{ font-size: 16px; line-height: 1.65; text-align: justify; }
 
-/* Cards grid */
+/* cards */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-top: 14px;
 }
+
 .card{
   background:#fff;
   border-radius: 14px;
   padding: 16px 16px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
   border: 1px solid rgba(0,0,0,.06);
 }
 .card h3{ margin-top:0; margin-bottom:8px; }
 .card p{ margin: 0 0 10px; opacity:.86; }
 .card a{ font-weight: 600; }
 
-/* Note */
+/* note */
 .note{
   background: #f3fbf1;
   border: 1px solid rgba(118,192,67,.35);
@@ -113,10 +125,14 @@ body, .main-content, .page-content { font-family: "Barlow", system-ui, -apple-sy
   padding: 14px 16px;
 }
 
-/* Responsive */
+/* responsive */
 @media (max-width: 900px){
-  .hero-banner{ height: 210px; }
-  .hero-row{ grid-template-columns: 1fr; }
-  .hero-logo img{ max-width: 120px; }
+  .cinema-card{
+    grid-template-columns: 1fr;
+  }
+  .cinema-logo{
+    width: 96px;
+    height: 96px;
+  }
   .grid{ grid-template-columns: 1fr; }
 }
