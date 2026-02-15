@@ -34,7 +34,7 @@ nav_order: 99
 
 # 📬 Contact
 
-Pour toute question, collaboration photo ou signalement naturaliste.
+Pour une question, une collaboration photo ou un signalement naturaliste.
 
 <br>
 
