@@ -6,3 +6,6 @@ header_pages:
   - projets.md
   - photos.md
   - contact.md
+  
+github:
+  is_project_page: false
