@@ -1,117 +1,102 @@
-/* =====================================================
-   YANN NATURE — STYLE IMMERSIF (Just the Docs)
-   ===================================================== */
+/* ====== MODE IMMERSIF PLEINE LARGEUR ====== */
 
-/* Pleine largeur */
-.main-content-wrap,
-.page-content { max-width: 100% !important; }
-
-.main-content{
-  max-width: 1400px !important;
-  margin: 0 auto;
+.main-content-wrap{
+max-width:100% !important;
 }
 
-@media (min-width:1200px){
-  .main-content{ padding-left: 40px; padding-right: 40px; }
+.page-content{
+max-width:1200px;
+margin:auto;
 }
 
-/* ===== Page Accueil ===== */
-.yn-wrap{ max-width: 1200px; margin: 0 auto; }
 
-.yn-hero{
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,.12);
-  background: #111;
-}
-.yn-hero img{
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  display: block;
-}
-@media (max-width:900px){
-  .yn-hero img{ height: 220px; }
+/* ====== HEADER PRO ====== */
+
+.header-pro{
+margin-bottom:40px;
 }
 
-.yn-logo{
-  text-align: center;
-  margin: 18px 0 10px;
-}
-.yn-logo img{
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  border-radius: 50%;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.10);
+.banner-pro{
+width:100%;
+border-radius:14px;
+margin-bottom:30px;
 }
 
-.yn-title{
-  margin: 10px 0 6px;
-  font-size: 34px;
-  line-height: 1.15;
-}
-.yn-lead{
-  margin: 0 0 18px;
-  opacity: .85;
-  font-size: 16px;
-  text-align: justify;
+/* zone logo + texte */
+.header-pro-inner{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
 }
 
-.yn-hr{
-  border: none;
-  border-top: 1px solid rgba(0,0,0,.10);
-  margin: 22px 0;
+/* 🔥 correction logo trop grand */
+.logo-pro{
+width:260px;
+max-width:40%;
+height:auto;
 }
 
-.yn-h2{
-  margin: 0 0 12px;
+/* texte */
+.header-pro-text h1{
+font-weight:600;
+margin-bottom:10px;
 }
 
-.yn-text{
-  margin: 0;
-  text-align: justify;
-  opacity: .92;
+.intro{
+font-size:18px;
+opacity:0.85;
+margin-bottom:15px;
 }
 
-/* Cartes */
-.yn-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+
+/* ====== BOUTONS ====== */
+
+.btn-zone{
+margin-top:15px;
 }
 
-.yn-card{
-  background: #fff;
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+.btn-main,
+.btn-second,
+.btn-green{
+padding:10px 18px;
+border-radius:10px;
+margin-right:10px;
+text-decoration:none !important;
+font-weight:500;
 }
 
-.yn-card-title{
-  font-weight: 750;
-  margin-bottom: 6px;
+.btn-main{
+background:#1b1f23;
+color:white !important;
 }
 
-.yn-card-text{
-  opacity: .85;
-  margin-bottom: 10px;
+.btn-second{
+background:#f1f1f1;
+color:#333 !important;
 }
 
-.yn-link{
-  text-decoration: none !important;
-  font-weight: 750;
+.btn-green{
+background:#86c232;
+color:white !important;
 }
 
-/* Bandeau terrain */
-.yn-terrain{
-  background: #ecfdf5;
-  border: 1px solid #b7e4c7;
-  border-left: 5px solid #2e8b57;
-  border-radius: 14px;
-  padding: 14px;
-  opacity: .95;
+
+/* ====== CARTES ====== */
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+margin-bottom:20px;
+}
+
+.card{
+flex:1;
+min-width:260px;
+background:#fafafa;
+border-radius:12px;
+padding:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
