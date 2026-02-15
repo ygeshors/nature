@@ -1,14 +1,13 @@
 ---
 title: Carnet de terrain
 nav_order: 2
+has_children: true
 ---
 
 # 🗒️ Carnet de terrain
 
-Ici : sorties, notes de terrain, espèces observées, photos du jour.
+Ici je rassemble mes notes et observations naturalistes.
 
-👉 Pour l’instant, tu peux lister manuellement tes sorties, puis on passera au mode “articles automatiques”.
+- 🚶 [Sorties](sorties.html)
 
-## Dernières entrées
-- **15/02/2026** — Sortie lagune — notes & observations
-- **…** — …
+> On automatisera la liste des entrées ensuite (mode “articles”).
