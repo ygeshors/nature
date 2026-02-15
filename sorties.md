@@ -5,5 +5,7 @@ nav_order: 3
 
 # 🚶 Sorties
 
-- **15/02/2026** — Lagune littorale — Gravelot, sternes (photo)
+Liste chronologique des sorties (lieu, météo, espèces, photo).
+
+- **15/02/2026** — Lagune littorale — Gravelot, sternes — 📸
 - **…** — …
