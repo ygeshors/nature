@@ -1,35 +1,85 @@
 ---
 ---
 
-/* ===== Yann Nature — V3 “cinéma” ===== */
+/* ===== Yann Nature — V3 “cinéma” (fond blanc + logo rond + bannière full width + 4 photos) ===== */
 
-/* Full width layout, contenu centré */
-.main-content-wrap { max-width: 100% !important; }
-
-/* Just-the-Docs : le contenu est dans .main-content */
-.main-content { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
-
-/* Barlow */
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
-body, .main-content, .main-content-wrap { font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
 
-/* -------- CINEMA HERO -------- */
+:root{
+  --page-bg:#ffffff;
+  --text:#111318;
+  --muted: rgba(17,19,24,.76);
+  --border: rgba(0,0,0,.08);
+  --shadow: 0 16px 40px rgba(0,0,0,.10);
+  --green:#76c043;
+}
+
+/* Fond blanc partout (Just-the-Docs) */
+html, body { background: var(--page-bg) !important; }
+.side-bar, .main, .main-content-wrap { background: var(--page-bg) !important; }
+body, .main-content, .main-content-wrap {
+  font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Pleine largeur : on casse le max-width du conteneur principal */
+.main-content-wrap{ max-width: 100% !important; }
+.main-content{ max-width: 100% !important; padding: 0 !important; }
+
+/* Container “centré” pour le contenu texte */
+.page-content{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* On évite la marge haute “doc” */
+.main-content { padding-top: 0 !important; }
+
+/* -------- HERO CINÉMA -------- */
 .cinema{
   margin: 0 0 26px;
   padding: 14px 0 0;
 }
 
-/* bannière plein large, sans texte */
+/* Bannière : vraie pleine largeur (edge-to-edge) */
 .cinema-banner{
-  width: 100%;
-  height: clamp(220px, 34vw, 360px);
+  width: 100vw;
+  height: clamp(240px, 34vw, 420px);
   object-fit: cover;
-  border-radius: 18px;
   display:block;
-  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+  border-radius: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
-/* la carte se pose SOUS la bannière */
+/* Bande de 4 photos sous la bannière */
+.filmstrip{
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 12px;
+  padding: 0 18px 8px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.filmstrip img{
+  width: 100%;
+  height: clamp(86px, 10vw, 120px);
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* La carte de présentation (sous la bannière + filmstrip) */
 .cinema-shell{
   max-width: 1180px;
   margin: 0 auto;
@@ -37,26 +87,27 @@ body, .main-content, .main-content-wrap { font-family: "Barlow", system-ui, -app
 }
 
 .cinema-card{
-  margin-top: 14px;
+  margin-top: 18px;
   background: #fff;
   border-radius: 18px;
-  padding: 16px 18px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.10);
-  border: 1px solid rgba(0,0,0,.08);
+  padding: 18px 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 110px 1fr;
   gap: 16px;
   align-items: start;
 }
 
-/* logo : taille max FORCÉE */
+/* Logo rond */
 .cinema-logo{
-  width: 120px;
-  height: 120px;
-  border-radius: 18px;
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;     /* ✅ rond */
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(0,0,0,.08);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -69,23 +120,23 @@ body, .main-content, .main-content-wrap { font-family: "Barlow", system-ui, -app
   display:block;
 }
 
-/* texte */
+/* Texte */
 .cinema-text h1{
   margin: 0 0 10px;
   font-weight: 700;
   line-height: 1.15;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .cinema-sub{
   margin: 0 0 12px;
   font-size: 16px;
-  line-height: 1.6;
-  opacity: .88;
+  line-height: 1.65;
+  color: var(--muted);
   text-align: justify;
 }
 
-/* boutons */
+/* Boutons */
 .cinema-cta{ display:flex; flex-wrap:wrap; gap:10px; }
 
 .btn{
@@ -98,12 +149,19 @@ body, .main-content, .main-content-wrap { font-family: "Barlow", system-ui, -app
 }
 .btn-dark{ background:#14181f; color:#fff !important; border-color: transparent; }
 .btn-light{ background:#fff; color:#14181f !important; }
-.btn-green{ background:#76c043; color:#fff !important; border-color: transparent; }
+.btn-green{ background:var(--green); color:#fff !important; border-color: transparent; }
 
-/* sections */
-.lead{ font-size: 16px; line-height: 1.65; text-align: justify; }
+/* Sections */
+.section-title{
+  display:flex; align-items:center; gap:10px;
+  margin: 26px 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
 
-/* cards */
+.lead{ font-size: 16px; line-height: 1.65; text-align: justify; color: var(--muted); }
+
+/* Cards */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -113,16 +171,16 @@ body, .main-content, .main-content-wrap { font-family: "Barlow", system-ui, -app
 
 .card{
   background:#fff;
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 16px 16px;
   box-shadow: 0 12px 26px rgba(0,0,0,.06);
   border: 1px solid rgba(0,0,0,.06);
 }
-.card h3{ margin-top:0; margin-bottom:8px; }
-.card p{ margin: 0 0 10px; opacity:.86; }
+.card h3{ margin:0 0 8px; }
+.card p{ margin: 0 0 10px; color: var(--muted); }
 .card a{ font-weight: 600; }
 
-/* note */
+/* Note */
 .note{
   background: #f3fbf1;
   border: 1px solid rgba(118,192,67,.35);
@@ -130,9 +188,12 @@ body, .main-content, .main-content-wrap { font-family: "Barlow", system-ui, -app
   padding: 14px 16px;
 }
 
-/* responsive */
-@media (max-width: 900px){
-  .cinema-card{ grid-template-columns: 1fr; }
-  .cinema-logo{ width: 96px; height: 96px; }
+/* Responsive */
+@media (max-width: 980px){
+  .filmstrip{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 680px){
+  .cinema-card{ grid-template-columns: 1fr; }
+  .cinema-logo{ width: 92px; height: 92px; }
 }
