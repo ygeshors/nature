@@ -1,55 +1,48 @@
 ---
 title: Contact
-nav_order: 5
+layout: default
+nav_order: 99
 ---
+
+<style>
+
+.btn-contact{
+  display:inline-block;
+  padding:14px 18px;
+  border-radius:16px;
+  background:#111827;
+  color:#fff !important;
+  font-weight:900;
+  text-decoration:none !important;
+  border:1px solid #e5e7eb;
+}
+
+.btn-contact:hover{
+  background:#0b1220;
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#fafafa;
+  margin-right:8px;
+}
+
+</style>
 
 # 📬 Contact
 
-<div style="max-width:760px">
+Pour toute question, collaboration photo ou signalement naturaliste.
 
-<p style="font-size:1.05rem; margin-top:0;">
-Vous souhaitez échanger autour de la nature, d’un projet, d’une sortie terrain ou d’une photo ?
-Écrivez-moi, je réponds dès que possible.
-</p>
+<br>
 
-<hr>
+<a class="btn-contact" href="{{ "/contact/send/" | relative_url }}">
+✉️ Envoyer un message
+</a>
 
-<div style="padding:14px 16px; border:1px solid #e5e7eb; border-radius:12px; background:#fafafa;">
-  <div style="font-size:1.2rem; font-weight:700; margin-bottom:6px;">
-    Yann GESHORS
-  </div>
+<br><br>
 
-  <div style="display:grid; grid-template-columns: 140px 1fr; gap:8px 14px; align-items:center;">
-
-    <div style="opacity:0.75;">📍 Ville</div>
-    <div><strong>Sérignan</strong></div>
-
-    <div style="opacity:0.75;">📧 Email</div>
-    <div><a href="mailto:ygeshors@ecomail.eco">ygeshors@ecomail.eco</a></div>
-
-    <div style="opacity:0.75;">📱 Téléphone</div>
-    0766521990
-
-  </div>
-
-  <div style="margin-top:12px; font-size:0.95rem; opacity:0.85;">
-    ⏱️ Si je suis sur le terrain, je réponds un peu plus tard — merci pour votre patience 🌿
-  </div>
-</div>
-
-<hr>
-
-## 🌿 Sujets de contact (exemples)
-
-<ul>
-  <li>Photographie nature (partage, autorisations, collaboration)</li>
-  <li>Observations & sorties terrain</li>
-  <li>Projets biodiversité / médiation</li>
-  <li>Signalement d’observations (espèces, dérangements, etc.)</li>
-</ul>
-
-<div style="padding:12px 14px; border-left:4px solid #16a34a; background:#f0fdf4; border-radius:10px;">
-  <strong>Conseil :</strong> indiquez le lieu, la date et (si possible) une photo ou une description rapide.
-</div>
-
-</div>
+<span class="badge">📍 Sérignan</span>
+<span class="badge">📞 07 66 52 19 90</span>
