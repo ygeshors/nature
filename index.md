@@ -1,108 +1,88 @@
 ---
+layout: default
 title: Accueil
 nav_order: 1
 ---
 
 <div class="yn-wrap">
 
-<img src="/assets/images/banner.jpg" alt="Bannière Yann Nature">
+  <div class="yn-hero">
+    <img src="{{ site.baseurl }}/assets/images/banner.jpg" alt="Bannière Yann Nature">
+  </div>
 
-</div>
+  <div class="yn-logo">
+    <img src="{{ site.baseurl }}/assets/images/logo-yann-nature.png" alt="Logo Yann Nature">
+  </div>
 
-<div class="yn-logo">
+  <h1 class="yn-title">Yann GESHORS — Nature &amp; Biodiversité</h1>
+  <p class="yn-lead">
+    Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen.<br>
+    Ici, je partage des carnets d’observation, de la photographie de terrain, des sorties et quelques projets liés à l’étude et à la protection du vivant.
+  </p>
 
-<img src="/assets/images/logo-yann-nature.png" alt="Logo Yann Nature">
+  <hr class="yn-hr">
 
-</div>
+  <h2 class="yn-h2">🌿 Présentation</h2>
+  <p class="yn-text">
+    Naturaliste de terrain, je documente le vivant par l’observation et la photographie, avec un attachement particulier au littoral méditerranéen.<br>
+    Sur ce site, je partage des sorties, des notes de terrain et des images prises sur le vif — une approche sobre, respectueuse, et tournée vers la compréhension des milieux.
+  </p>
 
-# Yann GESHORS — Nature & Biodiversité
+  <hr class="yn-hr">
 
-Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen.  
-Ici, je partage des carnets d’observation, de la photographie de terrain, des sorties et quelques projets liés à l’étude et à la protection du vivant.
+  <h2 class="yn-h2">🌱 Ma démarche</h2>
+  <div class="yn-grid">
+    <div class="yn-card">
+      <div class="yn-card-title">🔎 Observer</div>
+      <div class="yn-card-text">Écoute, discrétion et attention aux indices du vivant.</div>
+    </div>
 
----
+    <div class="yn-card">
+      <div class="yn-card-title">📸 Photographier</div>
+      <div class="yn-card-text">La photo comme mémoire du terrain et vecteur de sensibilisation.</div>
+    </div>
 
-## 🌿 Présentation
+    <div class="yn-card">
+      <div class="yn-card-title">🌿 Transmettre</div>
+      <div class="yn-card-text">Rendre la nature lisible et accessible sans la simplifier.</div>
+    </div>
+  </div>
 
-Naturaliste de terrain, je documente le vivant par l’observation et la photographie, avec un attachement particulier au littoral méditerranéen.  
-Sur ce site, je partage des sorties, des notes de terrain et des images prises sur le vif — une approche sobre, respectueuse, et tournée vers la compréhension des milieux.
+  <hr class="yn-hr">
 
----
+  <h2 class="yn-h2">🧭 Explorer</h2>
+  <div class="yn-grid">
+    <div class="yn-card">
+      <div class="yn-card-title">📓 Carnet de terrain</div>
+      <div class="yn-card-text">Observations, comportements, indices naturalistes.</div>
+      <a class="yn-link" href="{{ site.baseurl }}/carnet/">Accéder →</a>
+    </div>
 
-## 🌱 Ma démarche
+    <div class="yn-card">
+      <div class="yn-card-title">📷 Photographie nature</div>
+      <div class="yn-card-text">Images prises sur le vif, sans mise en scène.</div>
+      <a class="yn-link" href="{{ site.baseurl }}/photos/">Voir →</a>
+    </div>
 
-<div class="yn-grid">
+    <div class="yn-card">
+      <div class="yn-card-title">🧩 Projets</div>
+      <div class="yn-card-text">Suivis naturalistes et retours d’expérience.</div>
+      <a class="yn-link" href="{{ site.baseurl }}/projets/">Découvrir →</a>
+    </div>
 
-<div class="yn-card">
+    <div class="yn-card">
+      <div class="yn-card-title">📬 Contact</div>
+      <div class="yn-card-text">Collaboration, observation ou question.</div>
+      <a class="yn-link" href="{{ site.baseurl }}/contact/">Me contacter →</a>
+    </div>
+  </div>
 
-### 🔎 Observer  
-Écoute, discrétion et attention aux indices du vivant.
+  <hr class="yn-hr">
 
-</div>
-
-<div class="yn-card">
-
-### 📸 Photographier  
-La photo comme mémoire du terrain et vecteur de sensibilisation.
-
-</div>
-
-<div class="yn-card">
-
-### 🌿 Transmettre  
-Rendre la nature lisible et accessible sans la simplifier.
-
-</div>
-
-</div>
-
----
-
-## 🧭 Explorer
-
-<div class="yn-grid">
-
-<div class="yn-card">
-
-### 📓 Carnet de terrain  
-Observations, comportements, indices naturalistes.  
-[Accéder →](/carnet/)
-
-</div>
-
-<div class="yn-card">
-
-### 📷 Photographie nature  
-Images prises sur le vif, sans mise en scène.  
-[Voir →](/photos/)
-
-</div>
-
-<div class="yn-card">
-
-### 🧩 Projets  
-Suivis naturalistes et retours d’expérience.  
-[Découvrir →](/projets/)
-
-</div>
-
-<div class="yn-card">
-
-### 📬 Contact  
-Collaboration, observation ou question.  
-[Me contacter →](/contact/)
-
-</div>
-
-</div>
-
----
-
-## 🌊 Terrains d’exploration
-
-<div class="yn-terrain">
-
-Littoral méditerranéen · Dunes · Lagunes · Zones humides · Avifaune · Ambiances sauvages.  
-Observation discrète, respect des distances et attention aux cycles naturels.
+  <h2 class="yn-h2">🌊 Terrains d’exploration</h2>
+  <div class="yn-terrain">
+    Littoral méditerranéen · Dunes · Lagunes · Zones humides · Avifaune · Ambiances sauvages.<br>
+    Observation discrète, respect des distances et attention aux cycles naturels.
+  </div>
 
 </div>
