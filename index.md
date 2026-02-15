@@ -5,15 +5,13 @@ nav_order: 1
 ---
 
 <style>
-
-/* HERO PHOTO PURE */
+/* ===== HERO PHOTO PURE ===== */
 .hero-wrap{
   border-radius:18px;
   overflow:hidden;
   border:1px solid #e5e7eb;
-  margin:12px 0 28px 0;
+  margin:12px 0 18px 0;
 }
-
 .hero-img{
   width:100%;
   height:340px;
@@ -22,31 +20,42 @@ nav_order: 1
   filter:saturate(1.05) contrast(1.05);
 }
 
-/* SECTIONS */
-.section{
-  margin:28px 0;
+/* ===== SIGNATURE STRIP (4 PHOTOS) ===== */
+.strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin: 0 0 26px 0;
+}
+.strip img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.strip img:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,.10);
 }
 
+/* ===== SECTIONS ===== */
+.section{ margin: 28px 0; }
 .section-title{
   font-size:1.45rem;
-  font-weight:800;
+  font-weight:900;
   margin-bottom:12px;
 }
+.justify{ text-align:justify; }
 
-/* JUSTIFY TEXTE */
-.justify{
-  text-align:justify;
-}
-
-/* GRID */
+/* ===== CARDS ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:16px;
   margin-top:12px;
 }
-
-/* CARD STYLE */
 .card{
   border:1px solid #e5e7eb;
   border-radius:16px;
@@ -54,12 +63,10 @@ nav_order: 1
   background:#fff;
   transition:transform .2s ease, box-shadow .2s ease;
 }
-
 .card:hover{
   transform:translateY(-4px);
   box-shadow:0 12px 26px rgba(0,0,0,.08);
 }
-
 .card-title{
   font-weight:900;
   margin-bottom:8px;
@@ -72,87 +79,95 @@ nav_order: 1
   border-radius:14px;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .hero-img{ height: 420px; }
+  .strip{ grid-template-columns:repeat(2,1fr); }
+  .strip img{ height:130px; }
+}
+@media (max-width: 520px){
+  .strip{ grid-template-columns:1fr; }
+  .strip img{ height:160px; }
+}
 </style>
-
 
 <!-- HERO PHOTO SANS TEXTE -->
 <div class="hero-wrap">
-<img class="hero-img" src="{{ "/assets/images/banniere.jpg" | relative_url }}">
+  <img class="hero-img" src="{{ "/assets/images/banniere.jpg" | relative_url }}" alt="Bannière — Yann Geshors Nature & Biodiversité">
 </div>
 
+<!-- SIGNATURE YANN NATURE : 4 PHOTOS -->
+<div class="strip">
+  <img src="{{ "/assets/images/strip-1.jpg" | relative_url }}" alt="Photo 1 — terrain">
+  <img src="{{ "/assets/images/strip-2.jpg" | relative_url }}" alt="Photo 2 — terrain">
+  <img src="{{ "/assets/images/strip-3.jpg" | relative_url }}" alt="Photo 3 — terrain">
+  <img src="{{ "/assets/images/strip-4.jpg" | relative_url }}" alt="Photo 4 — terrain">
+</div>
 
 <div class="section">
-<div class="section-title">👤 Présentation</div>
-
-<div class="justify">
-Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen, je consacre une grande partie de mon temps à observer, photographier et comprendre les milieux naturels.  
-Ce site est une vitrine personnelle : un espace pour partager des carnets de terrain, des images et une vision sensible de la nature, entre immersion, respect du vivant et transmission.
+  <div class="section-title">👤 Présentation</div>
+  <div class="justify">
+    Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen, je consacre une grande partie de mon temps à observer, photographier et comprendre les milieux naturels.  
+    Ce site est une vitrine personnelle : un espace pour partager des carnets de terrain, des images et une vision sensible de la nature, entre immersion, respect du vivant et transmission.
+  </div>
 </div>
-</div>
-
 
 <div class="section">
-<div class="section-title">🌱 Ma démarche</div>
+  <div class="section-title">🌱 Ma démarche</div>
 
-<div class="grid">
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">🔎 Observer</div>
+      Approche naturaliste basée sur l’écoute, la discrétion et l’attention aux détails du vivant.
+    </div>
 
-<div class="card">
-<div class="card-title">🔎 Observer</div>
-Approche naturaliste basée sur l’écoute, la discrétion et l’attention aux détails du vivant.
+    <div class="card">
+      <div class="card-title">📸 Photographier</div>
+      La photographie comme outil de mémoire, d’émotion et de sensibilisation à la biodiversité.
+    </div>
+
+    <div class="card">
+      <div class="card-title">🌿 Transmettre</div>
+      Partager des connaissances et des ressentis pour reconnecter chacun à la nature.
+    </div>
+  </div>
 </div>
-
-<div class="card">
-<div class="card-title">📸 Photographier</div>
-La photographie comme outil de mémoire, d’émotion et de sensibilisation à la biodiversité.
-</div>
-
-<div class="card">
-<div class="card-title">🌿 Transmettre</div>
-Partager des connaissances et des ressentis pour reconnecter chacun à la nature.
-</div>
-
-</div>
-</div>
-
 
 <div class="section">
-<div class="section-title">🧭 Explorer</div>
+  <div class="section-title">🧭 Explorer</div>
 
-<div class="grid">
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">🗒️ Carnet de terrain</div>
+      Sorties, observations, comportements, indices et ambiances.
+      <br><a href="{{ "/carnet/" | relative_url }}">Accéder →</a>
+    </div>
 
-<div class="card">
-<div class="card-title">🗒️ Carnet de terrain</div>
-Sorties, observations, comportements, indices et ambiances.
-<br><a href="{{ "/carnet/" | relative_url }}">Accéder →</a>
+    <div class="card">
+      <div class="card-title">📸 Photographie nature</div>
+      Images prises sur le vif, sans mise en scène.
+      <br><a href="{{ "/photos/" | relative_url }}">Voir →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🌱 Projets</div>
+      Suivis naturalistes, axes de travail et retours d’expérience.
+      <br><a href="{{ "/projets/" | relative_url }}">Découvrir →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📬 Contact</div>
+      Question, collaboration ou signalement.
+      <br><a href="{{ "/contact/" | relative_url }}">Me contacter →</a>
+    </div>
+  </div>
 </div>
-
-<div class="card">
-<div class="card-title">📸 Photographie nature</div>
-Images prises sur le vif, sans mise en scène.
-<br><a href="{{ "/photos/" | relative_url }}">Voir →</a>
-</div>
-
-<div class="card">
-<div class="card-title">🌱 Projets</div>
-Suivis naturalistes, axes de travail et retours d’expérience.
-<br><a href="{{ "/projets/" | relative_url }}">Découvrir →</a>
-</div>
-
-<div class="card">
-<div class="card-title">📬 Contact</div>
-Question, collaboration ou signalement.
-<br><a href="{{ "/contact/" | relative_url }}">Me contacter →</a>
-</div>
-
-</div>
-</div>
-
 
 <div class="section">
-<div class="section-title">🌊 Terrains d’exploration</div>
+  <div class="section-title">🌊 Terrains d’exploration</div>
 
-<div class="note">
-Littoral méditerranéen • Dunes • Lagunes • Zones humides • Avifaune • Ambiances sauvages.
-Observation discrète, respect des distances et attention aux cycles saisonniers.
-</div>
+  <div class="note">
+    Littoral méditerranéen • Dunes • Lagunes • Zones humides • Avifaune • Ambiances sauvages.  
+    Observation discrète, respect des distances et attention aux cycles saisonniers.
+  </div>
 </div>
