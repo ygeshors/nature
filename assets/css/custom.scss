@@ -1,199 +1,198 @@
----
----
+/* ===== Yann Nature — Header PRO V2 (plein largeur) ===== */
 
-/* ===== Yann Nature — V3 “cinéma” (fond blanc + logo rond + bannière full width + 4 photos) ===== */
-
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+/* Barlow */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
 
 :root{
-  --page-bg:#ffffff;
-  --text:#111318;
-  --muted: rgba(17,19,24,.76);
-  --border: rgba(0,0,0,.08);
-  --shadow: 0 16px 40px rgba(0,0,0,.10);
-  --green:#76c043;
+  --yn-max: 1120px;
+  --yn-pad: 18px;
+
+  --yn-text: #111827;
+  --yn-muted: rgba(17,24,39,.78);
+
+  --yn-border: rgba(0,0,0,.08);
+  --yn-shadow: 0 18px 45px rgba(0,0,0,.10);
+
+  --yn-green: #76c043;
+  --yn-dark: #14181f;
 }
 
-/* Fond blanc partout (Just-the-Docs) */
-html, body { background: var(--page-bg) !important; }
-.side-bar, .main, .main-content-wrap { background: var(--page-bg) !important; }
-body, .main-content, .main-content-wrap {
+/* Fond blanc + typo */
+html, body { background:#fff !important; }
+body, .main-content, .page-content {
   font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
+  color: var(--yn-text);
 }
 
-/* Pleine largeur : on casse le max-width du conteneur principal */
-.main-content-wrap{ max-width: 100% !important; }
-.main-content{ max-width: 100% !important; padding: 0 !important; }
+/* Enlever les contraintes “documentation” */
+.main-content-wrap { max-width: 100% !important; }
+.page-content { max-width: 100% !important; padding: 0 !important; }
+.site-footer { display:none !important; }
 
-/* Container “centré” pour le contenu texte */
-.page-content{
-  max-width: 1180px;
+/* Contenu lisible centré */
+.yn-content{
+  max-width: var(--yn-max);
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 26px var(--yn-pad);
 }
 
-/* On évite la marge haute “doc” */
-.main-content { padding-top: 0 !important; }
-
-/* -------- HERO CINÉMA -------- */
-.cinema{
-  margin: 0 0 26px;
-  padding: 14px 0 0;
-}
-
-/* Bannière : vraie pleine largeur (edge-to-edge) */
-.cinema-banner{
+/* Pleine largeur même si on est dans un container */
+.yn-full{
   width: 100vw;
-  height: clamp(240px, 34vw, 420px);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* HERO */
+.yn-hero{ padding-top: 10px; }
+
+/* Bannière pleine page */
+.yn-banner{
+  width: 100%;
+  height: clamp(220px, 34vw, 380px);
   object-fit: cover;
   display:block;
-  border-radius: 0;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  border-radius: 0; /* plein écran net */
 }
 
-/* Bande de 4 photos sous la bannière */
-.filmstrip{
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-top: 12px;
-  padding: 0 18px 8px;
+/* Strip 4 photos */
+.yn-strip-wrap{ background:#fff; }
+.yn-strip{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
+  padding: 14px var(--yn-pad) 10px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
-.filmstrip img{
-  width: 100%;
-  height: clamp(86px, 10vw, 120px);
+.yn-strip img{
+  width:100%;
+  height: 120px;
   object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  display:block;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  border: 1px solid var(--yn-border);
 }
 
-/* La carte de présentation (sous la bannière + filmstrip) */
-.cinema-shell{
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 18px;
-}
-
-.cinema-card{
-  margin-top: 18px;
-  background: #fff;
+/* Carte intro */
+.yn-card{
+  margin-top: 16px;
+  background:#fff;
+  border: 1px solid var(--yn-border);
   border-radius: 18px;
-  padding: 18px 18px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  box-shadow: var(--yn-shadow);
+  padding: 18px;
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 96px 1fr;
   gap: 16px;
   align-items: start;
 }
 
-/* Logo rond */
-.cinema-logo{
-  width: 110px;
-  height: 110px;
-  border-radius: 999px;     /* ✅ rond */
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+/* Logo rond, taille fixe */
+.yn-logo{
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;  /* rond */
+  overflow:hidden;
+  background:#fff;
+  border: 1px solid var(--yn-border);
   display:flex;
   align-items:center;
   justify-content:center;
 }
-
-.cinema-logo img{
+.yn-logo img{
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* important : jamais énorme */
   display:block;
 }
 
-/* Texte */
-.cinema-text h1{
+.yn-card-text h1{
   margin: 0 0 10px;
-  font-weight: 700;
+  font-size: 28px;
   line-height: 1.15;
-  font-size: 30px;
+  font-weight: 700;
 }
-
-.cinema-sub{
-  margin: 0 0 12px;
-  font-size: 16px;
+.yn-sub{
+  margin: 0 0 14px;
+  color: var(--yn-muted);
   line-height: 1.65;
-  color: var(--muted);
   text-align: justify;
 }
 
 /* Boutons */
-.cinema-cta{ display:flex; flex-wrap:wrap; gap:10px; }
-
-.btn{
+.yn-cta{ display:flex; flex-wrap:wrap; gap:10px; }
+.yn-btn{
   display:inline-block;
   padding: 10px 14px;
   border-radius: 12px;
   text-decoration:none !important;
-  font-weight: 600;
-  border: 1px solid rgba(0,0,0,.10);
+  font-weight: 700;
+  border: 1px solid var(--yn-border);
 }
-.btn-dark{ background:#14181f; color:#fff !important; border-color: transparent; }
-.btn-light{ background:#fff; color:#14181f !important; }
-.btn-green{ background:var(--green); color:#fff !important; border-color: transparent; }
+.yn-btn-dark{ background: var(--yn-dark); color:#fff !important; border-color: transparent; }
+.yn-btn-light{ background:#fff; color: var(--yn-dark) !important; }
+.yn-btn-green{ background: var(--yn-green); color:#fff !important; border-color: transparent; }
 
 /* Sections */
-.section-title{
-  display:flex; align-items:center; gap:10px;
-  margin: 26px 0 10px;
+.yn-section{ margin-top: 18px; }
+.yn-section h2{
+  margin: 0 0 10px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
+}
+.yn-lead{
+  margin: 0;
+  line-height: 1.75;
+  color: var(--yn-muted);
+  text-align: justify;
 }
 
-.lead{ font-size: 16px; line-height: 1.65; text-align: justify; color: var(--muted); }
-
-/* Cards */
-.grid{
+/* Grilles */
+.yn-grid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 14px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+  margin-top: 12px;
 }
 
-.card{
+.yn-mini, .yn-cardlink{
   background:#fff;
-  border-radius: 16px;
-  padding: 16px 16px;
-  box-shadow: 0 12px 26px rgba(0,0,0,.06);
-  border: 1px solid rgba(0,0,0,.06);
+  border: 1px solid var(--yn-border);
+  border-radius: 14px;
+  padding: 14px 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
 }
-.card h3{ margin:0 0 8px; }
-.card p{ margin: 0 0 10px; color: var(--muted); }
-.card a{ font-weight: 600; }
+.yn-mini h3, .yn-cardlink h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+}
+.yn-mini p, .yn-cardlink p{
+  margin: 0 0 10px;
+  color: var(--yn-muted);
+  line-height: 1.6;
+}
+.yn-cardlink a{ font-weight: 800; }
 
-/* Note */
-.note{
+/* Note terrain */
+.yn-note{
+  margin-top: 14px;
   background: #f3fbf1;
   border: 1px solid rgba(118,192,67,.35);
   border-radius: 14px;
   padding: 14px 16px;
+  color: rgba(17,24,39,.85);
 }
 
-/* Responsive */
-@media (max-width: 980px){
-  .filmstrip{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .grid{ grid-template-columns: 1fr; }
-}
-@media (max-width: 680px){
-  .cinema-card{ grid-template-columns: 1fr; }
-  .cinema-logo{ width: 92px; height: 92px; }
+/* Mobile */
+@media (max-width: 900px){
+  .yn-strip{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .yn-strip img{ height: 110px; }
+
+  .yn-card{ grid-template-columns: 1fr; }
+  .yn-logo{ width: 78px; height: 78px; }
+
+  .yn-grid{ grid-template-columns: 1fr; }
 }
