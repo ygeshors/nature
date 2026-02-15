@@ -1,12 +1,12 @@
 ---
-layout: default
 title: Projets
+nav_order: 4
 ---
 
-# 🌿 Projets nature
+# 🌱 Projets
 
-## Suivis naturalistes
-Observations terrain et biodiversité.
+Quelques axes et projets en cours / à venir.
 
-## Sensibilisation
-Actions éducatives et médiation environnementale.
+- Suivis naturalistes et observations
+- Photographie de terrain
+- Partages et médiation autour de la biodiversité
