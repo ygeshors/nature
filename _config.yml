@@ -1,27 +1,19 @@
 title: Nature
 description: Carnet naturaliste • photos • terrain
-
-# Thème Just The Docs
 remote_theme: just-the-docs/just-the-docs
 
-# ⚠️ Configuration GitHub Pages (site projet)
 url: "https://ygeshors.github.io"
 baseurl: "/nature"
 
-# Apparence
 color_scheme: light
 search_enabled: true
 permalink: pretty
-
-# Mode immersif (sans sidebar documentation)
 nav_enabled: false
 
-# Nettoyage style documentation
 footer_content: ""
 gh_edit_link: false
 last_edit_timestamp: false
 
-# Liens rapides en haut à droite
 aux_links:
   "📸 Photos":
     - "/nature/photos/"
@@ -30,7 +22,6 @@ aux_links:
   "📬 Contact":
     - "/nature/contact/"
 
-# CSS personnalisé
 just_the_docs:
   custom_css:
-    - assets/css/custom.css
+    - "/nature/assets/css/custom.css"
