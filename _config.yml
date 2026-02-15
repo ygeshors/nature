@@ -23,3 +23,7 @@ aux_links:
 
 # (Optionnel) Si un jour tu veux une couleur différente :
 # color_scheme: dark
+
+just_the_docs:
+  custom_css:
+    - assets/css/custom.css
