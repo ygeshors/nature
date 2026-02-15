@@ -5,10 +5,12 @@ nav_order: 4
 
 # 📸 Photos
 
+> Ajoute tes images dans `assets/images/` puis référence-les ici.
+
 ## Littoral
-![Photo](assets/images/photo1.jpg)
-![Photo](assets/images/photo2.jpg)
+![Littoral](assets/images/photo1.jpg)
+![Littoral](assets/images/photo2.jpg)
 
 ## Oiseaux
-![Photo](assets/images/oiseau1.jpg)
-![Photo](assets/images/oiseau2.jpg)
+![Oiseau](assets/images/oiseau1.jpg)
+![Oiseau](assets/images/oiseau2.jpg)
