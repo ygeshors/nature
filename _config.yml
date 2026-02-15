@@ -2,31 +2,26 @@ title: Nature
 description: Carnet naturaliste • photos • terrain
 remote_theme: just-the-docs/just-the-docs
 
-# IMPORTANT pour un repo de type /nature/
+# Project site GitHub Pages (important)
 url: "https://ygeshors.github.io"
 baseurl: "/nature"
 
-# Style & fonctionnalités
 color_scheme: light
 search_enabled: true
 permalink: pretty
 
-# Nettoyage (moins "documentation")
 footer_content: ""
 gh_edit_link: false
 last_edit_timestamp: false
 
-# Liens en haut du menu
-# (sans domaine, et avec le bon /nature/ devant)
 aux_links:
   "📸 Photos":
-    - "/nature/photos/"
+    - "{{ '/photos/' | relative_url }}"
   "🗒️ Carnet":
-    - "/nature/carnet/"
+    - "{{ '/carnet/' | relative_url }}"
   "📬 Contact":
-    - "/nature/contact/"
+    - "{{ '/contact/' | relative_url }}"
 
-# Police Barlow personnalisée
 just_the_docs:
   custom_css:
     - assets/css/custom.css
