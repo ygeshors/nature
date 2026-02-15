@@ -1,62 +1,28 @@
 ---
 title: Accueil
+layout: default
 nav_order: 1
 ---
 
-<style>
-.hero{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.hero img{
-  width:100%;
-  border-radius:18px;
-  margin-top:10px;
-}
-
-.intro{
-  max-width:850px;
-  margin:auto;
-  text-align:justify;
-}
-
-.blocs{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-  margin-top:25px;
-}
-
-.card{
-  padding:22px;
-  border-radius:14px;
-  border:1px solid #e5e7eb;
-  background:#fafafa;
-  transition:0.25s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 22px rgba(0,0,0,0.08);
-}
-
-.card h3{
-  margin-top:0;
-}
-
-.section{
-  margin-top:40px;
-}
-</style>
-
-<div class="hero">
+<img src="/nature/assets/images/banniere.jpg" style="width:100%; border-radius:10px; margin-bottom:20px;">
 
 # 🌿 Yann GESHORS — Nature & Biodiversité
 
-Photographie de terrain • Carnets naturalistes • Littoral méditerranéen
+<div style="text-align:justify; font-family:Barlow, sans-serif; font-size:16px; line-height:1.6;">
+Naturaliste de terrain passionné par les paysages et la biodiversité du littoral méditerranéen, je consacre une grande partie de mon temps à observer, photographier et comprendre les milieux naturels.
 
-<img src="{{ "/assets/images/banniere.jpg" | relative_url }}">
+Ce site est une vitrine personnelle : un espace vivant pour partager carnets de terrain, photographies naturalistes et projets liés à la protection du vivant.
+</div>
+
+<br>
+
+<div style="display:flex; gap:15px; flex-wrap:wrap;">
+
+<a href="/nature/photos/" style="background:#1f2937;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;">📸 Voir les photos</a>
+
+<a href="/nature/carnet/" style="background:#e5e7eb;color:#111;padding:10px 18px;border-radius:8px;text-decoration:none;">🗒️ Carnet de terrain</a>
+
+<a href="/nature/contact/" style="background:#e5e7eb;color:#111;padding:10px 18px;border-radius:8px;text-decoration:none;">📬 Me contacter</a>
 
 </div>
 
@@ -64,100 +30,64 @@ Photographie de terrain • Carnets naturalistes • Littoral méditerranéen
 
 ## 👤 Présentation
 
-<div class="intro">
-
-Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen, je consacre une grande partie de mon temps à observer, photographier et comprendre les milieux naturels.  
-Ce site est une vitrine personnelle : un espace pour partager des carnets de terrain, des images prises sur le vif et une vision sensible de la nature, entre immersion, respect du vivant et transmission.
-
+<div style="text-align:justify;">
+Mon approche repose sur une observation discrète du vivant, une immersion régulière sur le terrain et une photographie respectueuse des espèces et des habitats.  
+Entre dunes, lagunes et zones humides, je documente les dynamiques naturelles et partage une vision sensible de la nature méditerranéenne.
 </div>
 
 ---
-
-<div class="section">
 
 ## 🌱 Ma démarche
 
-<div class="blocs">
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px;">
 
-<div class="card">
-
-### 🔎 Observer  
-Approche naturaliste basée sur l’écoute, la discrétion et l’attention aux détails du vivant.
-
+<div style="border:1px solid #e5e7eb; padding:15px; border-radius:10px;">
+<h4>🔎 Observer</h4>
+<p>Approche naturaliste basée sur l'écoute, la discrétion et l'attention aux détails du vivant.</p>
 </div>
 
-<div class="card">
-
-### 📸 Photographier  
-La photographie comme outil de mémoire, d’émotion et de sensibilisation à la biodiversité.
-
+<div style="border:1px solid #e5e7eb; padding:15px; border-radius:10px;">
+<h4>📷 Photographier</h4>
+<p>La photographie comme outil de mémoire, d'émotion et de sensibilisation à la biodiversité.</p>
 </div>
 
-<div class="card">
-
-### 🌿 Transmettre  
-Partager des connaissances et des ressentis pour reconnecter chacun à la nature.
-
-</div>
-
+<div style="border:1px solid #e5e7eb; padding:15px; border-radius:10px;">
+<h4>🌿 Transmettre</h4>
+<p>Partager des connaissances et reconnecter chacun à la nature.</p>
 </div>
 
 </div>
 
 ---
 
-<div class="section">
+## 🧭 Explorer
 
-## 🧭 Explorer le site
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px;">
 
-<div class="blocs">
-
-<div class="card">
-
-### 🗒️ Carnet de terrain  
-Sorties, observations et notes naturalistes.
-
-👉 [Accéder au carnet]({{ "/carnet/" | relative_url }})
-
+<div style="border:1px solid #e5e7eb; padding:15px; border-radius:10px;">
+<h4>🗒️ Carnet de terrain</h4>
+<p>Sorties, observations, comportements et notes naturalistes.</p>
+<a href="/nature/carnet/">Accéder →</a>
 </div>
 
-<div class="card">
-
-### 📸 Photos  
-Images de terrain sans mise en scène.
-
-👉 [Voir les photos]({{ "/photos/" | relative_url }})
-
+<div style="border:1px solid #e5e7eb; padding:15px; border-radius:10px;">
+<h4>📸 Photographie nature</h4>
+<p>Images de terrain et instants sauvages.</p>
+<a href="/nature/photos/">Voir →</a>
 </div>
 
-<div class="card">
-
-### 🌱 Projets  
-Axes naturalistes et suivis de terrain.
-
-👉 [Découvrir]({{ "/projets/" | relative_url }})
-
-</div>
-
-<div class="card">
-
-### 📬 Contact  
-Une question ou une observation ?
-
-👉 [Me contacter]({{ "/contact/" | relative_url }})
-
-</div>
-
+<div style="border:1px solid #e5e7eb; padding:15px; border-radius:10px;">
+<h4>🌱 Projets</h4>
+<p>Actions naturalistes, suivis et médiation nature.</p>
+<a href="/nature/projets/">Découvrir →</a>
 </div>
 
 </div>
 
 ---
 
-<div class="section">
+## 📬 Contact
 
-## 🌊 Terrains d’exploration
+Pour une collaboration, un échange naturaliste ou une question :
 
-Littoral méditerranéen • Dunes naturelles • Lagunes et zones humides • Avifaune • Photographie immersive.
-
-</div>
+👉 **[Me contacter](/nature/contact/)**
