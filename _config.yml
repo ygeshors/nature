@@ -15,15 +15,13 @@ last_edit_timestamp: false
 # Liens en haut du menu (à droite dans l’en-tête)
 aux_links:
   "📸 Photos":
-    - "photos.html"
+    - "/photos/"
   "🗒️ Carnet":
-    - "carnet.html"
+    - "/carnet/"
   "📬 Contact":
-    - "contact.html"
+    - "/contact/"
 
-# (Optionnel) Si un jour tu veux une couleur différente :
-# color_scheme: dark
-
+# Police Barlow personnalisée
 just_the_docs:
   custom_css:
     - assets/css/custom.css
