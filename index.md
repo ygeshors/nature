@@ -15,5 +15,6 @@ Bienvenue sur mon espace dédié à la nature, à la photographie de terrain et 
 ## 🔗 Accès rapides
 - 🗒️ [Carnet de terrain](carnet.html)
 - 📸 [Photos](photos.html)
+- 🚶 [Sorties](sorties.html)
 - 🌱 [Projets](projets.html)
 - 📬 [Contact](contact.html)
