@@ -13,7 +13,7 @@ color_scheme: light
 search_enabled: true
 permalink: pretty
 
-# 🎨 Version immersive (supprime la sidebar doc)
+# Version immersive (pas de sidebar doc)
 nav_enabled: false
 
 # Nettoyage style documentation
@@ -21,14 +21,14 @@ footer_content: ""
 gh_edit_link: false
 last_edit_timestamp: false
 
-# Liens rapides en haut à droite
+# Liens rapides en haut à droite (NE PAS mettre de {{ }} ici)
 aux_links:
   "📸 Photos":
-    - "{{ '/photos/' | relative_url }}"
+    - "/nature/photos/"
   "🗒️ Carnet":
-    - "{{ '/carnet/' | relative_url }}"
+    - "/nature/carnet/"
   "📬 Contact":
-    - "{{ '/contact/' | relative_url }}"
+    - "/nature/contact/"
 
 # CSS personnalisé
 just_the_docs:
