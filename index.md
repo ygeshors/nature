@@ -5,6 +5,32 @@ nav_order: 1
 
 <style>
 .justify { text-align: justify; }
+
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.carte {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.carte:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.titre {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
 </style>
 
 # 🌿 Yann GESHORS — Nature & Biodiversité
@@ -17,36 +43,75 @@ nav_order: 1
 
 <div class="justify">
 
-Naturaliste de terrain et passionné de biodiversité, je consacre une grande partie de mon temps à l’observation, à la photographie et à la compréhension des milieux naturels, en particulier sur le littoral méditerranéen.
+Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen, je consacre une grande partie de mon temps à observer, photographier et comprendre les milieux naturels.
 
-À travers ce site, je partage un regard personnel et engagé sur la nature : sorties, carnets naturalistes, ambiances photographiques et réflexions autour de la préservation du vivant.
-
-Mon approche repose sur une observation attentive, une photographie respectueuse et une volonté constante de rendre la nature accessible, sensible et compréhensible.
+Ce site est une vitrine personnelle : un espace pour partager des carnets de terrain, des images et une vision sensible de la nature, entre immersion, respect du vivant et transmission.
 
 </div>
 
 ---
 
-## 🌊 Domaines d’intérêt
+## 🌱 Ma démarche
+
+<div class="vitrine">
+
+<div class="carte">
+<div class="titre">🔎 Observer</div>
+Approche naturaliste basée sur l’écoute, la discrétion et l’attention aux détails du vivant.
+</div>
+
+<div class="carte">
+<div class="titre">📸 Photographier</div>
+La photographie comme outil de mémoire, d’émotion et de sensibilisation à la biodiversité.
+</div>
+
+<div class="carte">
+<div class="titre">🌿 Transmettre</div>
+Partager des connaissances et des ressentis pour reconnecter chacun à la nature.
+</div>
+
+</div>
+
+---
+
+## 🌊 Terrains d’exploration
 
 <div class="justify">
 
-- Littoral, dunes et zones humides  
-- Avifaune et comportements naturels  
-- Photographie nature immersive  
-- Sensibilisation et transmission
+- Littoral méditerranéen et dunes naturelles  
+- Lagunes et zones humides  
+- Observations d’avifaune et comportements naturels  
+- Ambiances sauvages et photographie immersive
 
 </div>
 
 ---
 
-## 🧭 Navigation
+## 🧭 Accès rapide
 
-- 🗒️ [Carnet de terrain](carnet.html)  
-- 📸 [Photographie nature](photos.html)  
-- 🚶 [Sorties naturalistes](sorties.html)  
-- 🌱 [Projets](projets.html)  
-- 📬 [Contact](contact.html)
+<div class="vitrine">
+
+<div class="carte">
+<div class="titre">🗒️ Carnet de terrain</div>
+<a href="carnet.html">Explorer les observations</a>
+</div>
+
+<div class="carte">
+<div class="titre">📸 Photographie nature</div>
+<a href="photos.html">Voir les images</a>
+</div>
+
+<div class="carte">
+<div class="titre">🚶 Sorties naturalistes</div>
+<a href="sorties.html">Consulter les sorties</a>
+</div>
+
+<div class="carte">
+<div class="titre">📬 Contact</div>
+<a href="contact.html">Me contacter</a>
+</div>
+
+</div>
 
 ---
 
