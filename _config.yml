@@ -1,15 +1,22 @@
 title: Nature
-description: Site nature et biodiversité
-
+description: Carnet naturaliste • photos • terrain
 remote_theme: just-the-docs/just-the-docs
 
-github:
-  is_project_page: false
+# Look & navigation
+color_scheme: light
+search_enabled: true
 
-header_pages:
-  - projets.md
-  - photos.md
-  - contact.md
+# Ne pas afficher "Just the Docs" / éléments GitHub inutiles
+footer_content: ""
+gh_edit_link: false
+last_edit_timestamp: false
 
-permalink: pretty
-show_downloads: false
+# Organisation du menu (ordre + titres)
+nav_sort: case_sensitive
+aux_links:
+  "📸 Photos":
+    - "photos.html"
+  "🗒️ Carnet":
+    - "carnet.html"
+  "📬 Contact":
+    - "contact.html"
