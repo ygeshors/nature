@@ -35,7 +35,7 @@ nav_order: 1
 
 # 🌿 Yann GESHORS — Nature & Biodiversité
 
-![Bannière](assets/images/banniere.jpg)
+![Bannière]({{ "/assets/images/banniere.jpg" | relative_url }})
 
 ---
 
@@ -93,22 +93,27 @@ Partager des connaissances et des ressentis pour reconnecter chacun à la nature
 
 <div class="carte">
 <div class="titre">🗒️ Carnet de terrain</div>
-<a href="carnet.html">Explorer les observations</a>
+<a href="{{ "/carnet/" | relative_url }}">Explorer les observations</a>
 </div>
 
 <div class="carte">
 <div class="titre">📸 Photographie nature</div>
-<a href="photos.html">Voir les images</a>
+<a href="{{ "/photos/" | relative_url }}">Voir les images</a>
 </div>
 
 <div class="carte">
 <div class="titre">🚶 Sorties naturalistes</div>
-<a href="sorties.html">Consulter les sorties</a>
+<a href="{{ "/sorties/" | relative_url }}">Consulter les sorties</a>
+</div>
+
+<div class="carte">
+<div class="titre">🌱 Projets</div>
+<a href="{{ "/projets/" | relative_url }}">Découvrir les projets</a>
 </div>
 
 <div class="carte">
 <div class="titre">📬 Contact</div>
-<a href="contact.html">Me contacter</a>
+<a href="{{ "/contact/" | relative_url }}">Me contacter</a>
 </div>
 
 </div>
