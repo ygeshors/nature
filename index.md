@@ -1,22 +1,19 @@
 ---
-layout: default
 title: Accueil
+nav_order: 1
 ---
 
 # 🌿 Nature & Biodiversité
+**Observer • Comprendre • Protéger**
 
-Observer • Comprendre • Protéger
+![Bannière](assets/images/banniere.jpg)
 
-Bienvenue sur mon espace dédié à la nature, aux projets naturalistes et à la photographie de terrain.
-
----
-
-## 🌱 Explorer le site
-- 👉 [Projets](projets.html)
-- 👉 [Photos](photos.html)
-- 👉 [Contact](contact.html)
+Bienvenue sur mon espace dédié à la nature, à la photographie de terrain et aux carnets naturalistes.
 
 ---
 
-## 📸 Dernières actualités
-Carnets de terrain et suivis naturalistes en cours de publication.
+## 🔗 Accès rapides
+- 🗒️ [Carnet de terrain](carnet.html)
+- 📸 [Photos](photos.html)
+- 🌱 [Projets](projets.html)
+- 📬 [Contact](contact.html)
