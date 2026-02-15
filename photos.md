@@ -1,6 +1,6 @@
 ---
 title: Photos
-nav_order: 4
+nav_order: 3
 ---
 
 # 📸 Photos
@@ -8,9 +8,9 @@ nav_order: 4
 > Ajoute tes images dans `assets/images/` puis référence-les ici.
 
 ## Littoral
-![Littoral](assets/images/photo1.jpg)
-![Littoral](assets/images/photo2.jpg)
+![Littoral]({{ "/assets/images/photo1.jpg" | relative_url }})
+![Littoral]({{ "/assets/images/photo2.jpg" | relative_url }})
 
 ## Oiseaux
-![Oiseau](assets/images/oiseau1.jpg)
-![Oiseau](assets/images/oiseau2.jpg)
+![Oiseau]({{ "/assets/images/oiseau1.jpg" | relative_url }})
+![Oiseau]({{ "/assets/images/oiseau2.jpg" | relative_url }})
