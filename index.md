@@ -17,7 +17,7 @@ nav_order: 1
 
 .hero-img{
   width: 100%;
-  height: 360px;
+  height: 280px;          /* ✅ moins haut = plus moderne */
   object-fit: cover;
   display:block;
   filter: saturate(1.05) contrast(1.05);
@@ -26,13 +26,14 @@ nav_order: 1
 .hero-overlay{
   position:absolute;
   inset:0;
-  background: linear-gradient(90deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.42) 55%, rgba(0,0,0,.18) 100%);
+  /* ✅ overlay plus léger = photo plus belle + texte lisible */
+  background: linear-gradient(90deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.20) 60%, rgba(0,0,0,.08) 100%);
 }
 
 .hero-content{
   position:absolute;
   inset:0;
-  padding: 26px;
+  padding: 24px;
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
@@ -51,7 +52,7 @@ nav_order: 1
 .hero-sub{
   margin:0;
   opacity:.92;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
 
 .hero-badges{
@@ -114,7 +115,7 @@ nav_order: 1
 .justify{ text-align: justify; }
 
 .section{
-  margin: 30px 0;
+  margin: 28px 0;
 }
 
 .section h2{
@@ -168,9 +169,11 @@ nav_order: 1
 
 /* Responsive */
 @media (max-width: 900px){
-  .hero-img{ height: 420px; }
-  .hero-overlay{ background: linear-gradient(0deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.40) 60%, rgba(0,0,0,.18) 100%); }
-  .hero-content{ padding: 22px; }
+  .hero-img{ height: 360px; }
+  .hero-overlay{
+    background: linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 60%, rgba(0,0,0,.10) 100%);
+  }
+  .hero-content{ padding: 20px; }
 }
 </style>
 
