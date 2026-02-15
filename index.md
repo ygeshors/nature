@@ -4,15 +4,18 @@ title: Accueil
 ---
 
 # 🌿 Nature & Biodiversité
+### Observations • Photos • Projets
 
-Bienvenue sur mon site.
+Je partage ici mes sorties nature, mes photos et des projets de suivi / sensibilisation.
 
-## 🔗 Accès rapides
-- [🌱 Projets](projets.html)
-- [📸 Photos](photos.html)
-- [📬 Contact](contact.html)
+---
 
-## 📌 À venir
-- Galeries photo
-- Carnet de terrain
-- Ressources
+## 📌 Navigation
+- ✅ [Projets](projets.html) : suivis, actions, objectifs
+- 📸 [Photos](photos.html) : galerie en cours
+- 📬 [Contact](contact.html)
+
+---
+
+## 🗒️ Dernière note
+Site en construction — mise à jour progressive.
