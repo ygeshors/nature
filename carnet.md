@@ -8,6 +8,6 @@ has_children: true
 
 Ici je rassemble mes notes et observations naturalistes.
 
-- 🚶 [Sorties](sorties.html)
+- 🚶 [Sorties]({{ "/sorties/" | relative_url }})
 
 > On automatisera la liste des entrées ensuite (mode “articles”).
