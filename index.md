@@ -4,31 +4,32 @@ title: Accueil
 nav_order: 1
 ---
 
-<div class="hero">
+<section class="cinema">
+  <img class="cinema-banner" src="{{ '/assets/images/banner.jpg' | relative_url }}" alt="Bannière Yann Nature">
 
-  <img class="hero-banner" src="{{ '/assets/images/banner.jpg' | relative_url }}" alt="Bannière Yann Nature">
+  <div class="cinema-shell">
+    <div class="cinema-card">
+      <div class="cinema-logo">
+        <img src="{{ '/assets/images/logo-yann-nature.png' | relative_url }}" alt="Logo Yann Nature">
+      </div>
 
-  <div class="hero-row">
-    <div class="hero-logo">
-      <img src="{{ '/assets/images/logo-yann-nature.png' | relative_url }}" alt="Logo Yann Nature">
-    </div>
+      <div class="cinema-text">
+        <h1>Yann GESHORS — Nature &amp; Biodiversité</h1>
+        <p class="cinema-sub">
+          Naturaliste de terrain, passionné par la biodiversité et les paysages du littoral méditerranéen.
+          Ici, je partage des carnets d’observation, de la photographie de terrain, des sorties et quelques projets
+          liés à l’étude et à la protection du vivant.
+        </p>
 
-    <div class="hero-card">
-      <h1 class="hero-title">Yann GESHORS — Nature &amp; Biodiversité</h1>
-      <p class="hero-sub">
-        Naturaliste de terrain, passionné par la biodiversité et les paysages du littoral méditerranéen.
-        Ici, je partage des carnets d’observation, de la photographie de terrain, des sorties et quelques projets
-        liés à l’étude et à la protection du vivant.
-      </p>
-
-      <div class="hero-cta">
-        <a class="btn btn-dark" href="{{ '/photos/' | relative_url }}">📸 Voir les photos</a>
-        <a class="btn btn-light" href="{{ '/carnet/' | relative_url }}">🗒️ Ouvrir le carnet</a>
-        <a class="btn btn-green" href="{{ '/contact/' | relative_url }}">📬 Me contacter</a>
+        <div class="cinema-cta">
+          <a class="btn btn-dark" href="{{ '/photos/' | relative_url }}">📸 Voir les photos</a>
+          <a class="btn btn-light" href="{{ '/carnet/' | relative_url }}">🗒️ Ouvrir le carnet</a>
+          <a class="btn btn-green" href="{{ '/contact/' | relative_url }}">📬 Me contacter</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <hr>
 
