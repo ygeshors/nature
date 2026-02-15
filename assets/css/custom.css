@@ -1,92 +1,91 @@
-/* ===== Yann Nature — Header PRO V2.1 (anti-chevauchement) ===== */
+/* ===== Yann Nature — Header PRO V2 (NO OVERLAP) ===== */
 
-/* Full width content */
+/* Full width (mais contenu centré) */
 .main-content-wrap { max-width: 100% !important; }
 .page-content { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
 
-/* Hero */
-.hero { margin: 18px 0 34px; }
+/* Typo (Barlow) */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+body, .main-content, .page-content { font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
 
-/* Bannière */
+/* ===== HERO ===== */
+.hero { margin: 18px 0 28px; }
+
+/* Bannière seule (pas de texte dessus) */
 .hero-banner{
   width: 100%;
-  height: 240px;
+  height: 260px;
   object-fit: cover;
   border-radius: 16px;
   display:block;
-}
-
-/* ✅ Ajoute un “espace tampon” sous la bannière
-   pour éviter que le logo/texte ne chevauchent */
-.hero::after{
-  content:"";
-  display:block;
-  height: 70px; /* ajuste si besoin */
-}
-
-/* Contenu sous bannière */
-.hero-inner{
-  display:flex;
-  gap: 22px;
-  align-items: center;
-
-  /* ✅ on ne remonte plus la section dans la bannière */
-  margin-top: -60px;  /* était -48 : ici on contrôle avec le tampon */
-  padding: 0 14px;
-  flex-wrap: wrap;
-
-  /* ✅ le bloc passe au-dessus du fond avec un rendu clean */
-  position: relative;
-  z-index: 2;
-}
-
-/* Logo */
-.hero-logo{
-  background: white;
-  border-radius: 18px;
-  padding: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  flex: 0 0 auto;
 }
 
-/* ✅ taille maîtrisée + jamais trop grand */
+/* Rangée sous la bannière */
+.hero-row{
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 14px; /* ✅ tout est sous la bannière */
+}
+
+/* Logo en “badge” */
+.hero-logo{
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.06);
+}
 .hero-logo img{
-  width: 140px;         /* ↓ réduit un peu */
-  max-width: 34vw;
+  width: 100%;
+  max-width: 140px;   /* ✅ taille maîtrisée */
   height: auto;
   display:block;
+  margin: 0 auto;
 }
 
-/* Text */
-.hero-text{ flex: 1; min-width: 280px; }
-.hero-text h1{
+/* Carte texte */
+.hero-card{
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.hero-title{
   margin: 0 0 10px;
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.15;
+  font-size: 28px;
 }
 .hero-sub{
-  margin: 0 0 14px;
-  font-size: 17px;
-  opacity: .86;
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: .88;
+  text-align: justify;
 }
 
-/* Buttons */
-.hero-cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; }
+/* Boutons */
+.hero-cta{ display:flex; flex-wrap:wrap; gap:10px; }
 .btn{
   display:inline-block;
-  padding: 10px 16px;
+  padding: 10px 14px;
   border-radius: 12px;
   text-decoration:none !important;
   font-weight: 600;
-  border: 1px solid rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.10);
 }
-.btn-dark{ background:#14181f; color:#fff !important; }
+.btn-dark{ background:#14181f; color:#fff !important; border-color: transparent; }
 .btn-light{ background:#fff; color:#14181f !important; }
 .btn-green{ background:#76c043; color:#fff !important; border-color: transparent; }
 
 /* Sections */
 .section{ margin: 26px 0; }
-.lead{ font-size: 16px; line-height: 1.65; }
+.lead{ font-size: 16px; line-height: 1.65; text-align: justify; }
 
 /* Cards grid */
 .grid{
@@ -104,6 +103,7 @@
 }
 .card h3{ margin-top:0; margin-bottom:8px; }
 .card p{ margin: 0 0 10px; opacity:.86; }
+.card a{ font-weight: 600; }
 
 /* Note */
 .note{
@@ -115,12 +115,8 @@
 
 /* Responsive */
 @media (max-width: 900px){
+  .hero-banner{ height: 210px; }
+  .hero-row{ grid-template-columns: 1fr; }
+  .hero-logo img{ max-width: 120px; }
   .grid{ grid-template-columns: 1fr; }
-  .hero-banner{ height: 200px; }
-
-  /* ✅ sur mobile : plus de “remontée” du bloc, zéro chevauchement */
-  .hero::after{ height: 16px; }
-  .hero-inner{ margin-top: 12px; }
-
-  .hero-logo img{ width: 120px; }
 }
