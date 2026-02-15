@@ -1,3 +1,8 @@
 theme: jekyll-theme-merlot
 title: Nature
 description: Site nature et biodiversité
+
+header_pages:
+  - projets.md
+  - photos.md
+  - contact.md
