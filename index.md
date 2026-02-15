@@ -4,195 +4,100 @@ layout: default
 nav_order: 1
 ---
 
-<style>
+<!-- HERO Yann Nature -->
+<div class="yn-hero">
 
-/* ===== POLICE BARLOW ===== */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap');
+  <!-- Image bannière (mets ton image dans assets/img/banner.jpg) -->
+  <img class="yn-hero__bg" src="{{ "/assets/img/banner.jpg" | relative_url }}" alt="Bannière Yann Nature">
 
-body{
-  font-family:'Barlow', sans-serif !important;
-}
+  <div class="yn-hero__veil"></div>
 
-/* ===== HERO PHOTO PURE ===== */
-.hero-wrap{
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid #e5e7eb;
-  margin:12px 0 24px 0;
-}
+  <!-- Logo rond (mets ton logo dans assets/img/logo-yann-nature.png) -->
+  <div class="yn-hero__logo" aria-label="Logo Yann Nature">
+    <img src="{{ "/assets/img/logo-yann-nature.png" | relative_url }}" alt="Logo Yann Nature">
+  </div>
 
-.hero-img{
-  width:100%;
-  height:340px;
-  object-fit:cover;
-  display:block;
-  filter:saturate(1.05) contrast(1.05);
-}
-
-/* ===== STRIP PHOTO SIGNATURE ===== */
-.strip{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 2fr;
-  gap:10px;
-  margin: 8px 0 32px 0;
-}
-
-.strip img{
-  width:100%;
-  height:140px;
-  object-fit:cover;
-  border-radius:16px;
-  border:1px solid #e5e7eb;
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.strip img:hover{
-  transform:scale(1.03);
-  box-shadow:0 14px 28px rgba(0,0,0,.12);
-}
-
-/* ===== SECTIONS ===== */
-.section{
-  margin:28px 0;
-}
-
-.section-title{
-  font-size:1.45rem;
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-.justify{
-  text-align:justify;
-}
-
-/* ===== CARTES ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
-  margin-top:12px;
-}
-
-.card{
-  border:1px solid #e5e7eb;
-  border-radius:16px;
-  padding:18px;
-  background:#fff;
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 26px rgba(0,0,0,.08);
-}
-
-.card-title{
-  font-weight:900;
-  margin-bottom:8px;
-}
-
-.note{
-  border-left:4px solid #16a34a;
-  background:#f0fdf4;
-  padding:14px 16px;
-  border-radius:14px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width:900px){
-  .hero-img{ height:420px; }
-  .strip{ grid-template-columns:repeat(2,1fr); }
-}
-
-@media (max-width:520px){
-  .strip{ grid-template-columns:1fr; }
-}
-
-</style>
-
-<!-- HERO PHOTO -->
-<div class="hero-wrap">
-  <img class="hero-img" src="{{ "/assets/images/banniere.jpg" | relative_url }}">
-</div>
-
-<!-- SIGNATURE PHOTO YANN NATURE -->
-<div class="strip">
-  <img src="{{ "/assets/images/strip-1.jpg" | relative_url }}">
-  <img src="{{ "/assets/images/strip-2.jpg" | relative_url }}">
-  <img src="{{ "/assets/images/strip-3.jpg" | relative_url }}">
-  <img src="{{ "/assets/images/strip-4.jpg" | relative_url }}">
-</div>
-
-<div class="section">
-<div class="section-title">👤 Présentation</div>
-
-<div class="justify">
-Naturaliste de terrain passionné par la biodiversité et les paysages du littoral méditerranéen, je consacre une grande partie de mon temps à observer, photographier et comprendre les milieux naturels.  
-Ce site est une vitrine personnelle : un espace pour partager des carnets de terrain, des images et une vision sensible de la nature, entre immersion, respect du vivant et transmission.
-</div>
-</div>
-
-<div class="section">
-<div class="section-title">🌱 Ma démarche</div>
-
-<div class="grid">
-
-<div class="card">
-<div class="card-title">🔎 Observer</div>
-Approche naturaliste basée sur l’écoute, la discrétion et l’attention aux détails du vivant.
-</div>
-
-<div class="card">
-<div class="card-title">📸 Photographier</div>
-La photographie comme outil de mémoire, d’émotion et de sensibilisation à la biodiversité.
-</div>
-
-<div class="card">
-<div class="card-title">🌿 Transmettre</div>
-Partager des connaissances et des ressentis pour reconnecter chacun à la nature.
-</div>
+  <!-- Boutons (aucun texte sur la bannière : juste actions) -->
+  <div class="yn-hero__actions">
+    <a class="yn-btn yn-btn--primary" href="{{ "/photos/" | relative_url }}">📸 Photos</a>
+    <a class="yn-btn" href="{{ "/carnet/" | relative_url }}">🗒️ Carnet</a>
+    <a class="yn-btn" href="{{ "/sorties/" | relative_url }}">🥾 Sorties</a>
+    <a class="yn-btn" href="{{ "/contact/" | relative_url }}">📬 Contact</a>
+  </div>
 
 </div>
+
+<br>
+
+# Yann GESHORS — Nature & Biodiversité
+
+Naturaliste de terrain, passionné par la biodiversité et les paysages du littoral méditerranéen.  
+Ici, je partage des **carnets d’observation**, de la **photographie de terrain**, des **sorties** et quelques **projets** liés à l’étude et à la protection du vivant.
+
+---
+
+## 🌿 Ma démarche
+
+<div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px;">
+  <div style="border:1px solid #e5e7eb; border-radius:16px; padding:14px; background:#fff;">
+    <div style="font-weight:900;">🔎 Observer</div>
+    <div style="opacity:.85; margin-top:6px;">
+      Écoute, discrétion, attention aux indices, comportements, cycles saisonniers.
+    </div>
+  </div>
+  <div style="border:1px solid #e5e7eb; border-radius:16px; padding:14px; background:#fff;">
+    <div style="font-weight:900;">📷 Photographier</div>
+    <div style="opacity:.85; margin-top:6px;">
+      Images prises sur le vif, pour documenter le terrain et transmettre une émotion juste.
+    </div>
+  </div>
+  <div style="border:1px solid #e5e7eb; border-radius:16px; padding:14px; background:#fff;">
+    <div style="font-weight:900;">🌱 Transmettre</div>
+    <div style="opacity:.85; margin-top:6px;">
+      Partager des connaissances et des ressentis, sans simplifier à outrance.
+    </div>
+  </div>
 </div>
 
-<div class="section">
-<div class="section-title">🧭 Explorer</div>
+<br>
 
-<div class="grid">
+## 🧭 Explorer
 
-<div class="card">
-<div class="card-title">🗒️ Carnet de terrain</div>
-Sorties, observations, comportements, indices et ambiances.
-<br><a href="{{ "/carnet/" | relative_url }}">Accéder →</a>
+<div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px;">
+  <div style="border:1px solid #e5e7eb; border-radius:16px; padding:14px; background:#fff;">
+    <div style="font-weight:900;">🗒️ Carnet de terrain</div>
+    <div style="opacity:.85; margin-top:6px;">
+      Observations, indices, comportements, notes naturalistes.
+    </div>
+    <div style="margin-top:10px;">
+      <a href="{{ "/carnet/" | relative_url }}">Accéder →</a>
+    </div>
+  </div>
+  <div style="border:1px solid #e5e7eb; border-radius:16px; padding:14px; background:#fff;">
+    <div style="font-weight:900;">📸 Photographie</div>
+    <div style="opacity:.85; margin-top:6px;">
+      Galerie d’images terrain (faune, ambiances, milieux).
+    </div>
+    <div style="margin-top:10px;">
+      <a href="{{ "/photos/" | relative_url }}">Voir →</a>
+    </div>
+  </div>
+  <div style="border:1px solid #e5e7eb; border-radius:16px; padding:14px; background:#fff;">
+    <div style="font-weight:900;">🧩 Projets</div>
+    <div style="opacity:.85; margin-top:6px;">
+      Thématiques, méthodes, suivis, retours d’expérience.
+    </div>
+    <div style="margin-top:10px;">
+      <a href="{{ "/projets/" | relative_url }}">Découvrir →</a>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<div class="card-title">📸 Photographie nature</div>
-Images prises sur le vif, sans mise en scène.
-<br><a href="{{ "/photos/" | relative_url }}">Voir →</a>
-</div>
+<br>
 
-<div class="card">
-<div class="card-title">🌱 Projets</div>
-Suivis naturalistes, axes de travail et retours d’expérience.
-<br><a href="{{ "/projets/" | relative_url }}">Découvrir →</a>
-</div>
+## 🌊 Terrains d’exploration
 
-<div class="card">
-<div class="card-title">📬 Contact</div>
-Question, collaboration ou signalement.
-<br><a href="{{ "/contact/" | relative_url }}">Me contacter →</a>
-</div>
-
-</div>
-</div>
-
-<div class="section">
-<div class="section-title">🌊 Terrains d’exploration</div>
-
-<div class="note">
-Littoral méditerranéen • Dunes • Lagunes • Zones humides • Avifaune • Ambiances sauvages.  
-Observation discrète, respect des distances et attention aux cycles saisonniers.
-</div>
+<div style="border:1px solid #d1fae5; background:#ecfdf5; border-radius:16px; padding:14px;">
+Littoral méditerranéen • dunes • lagunes • zones humides • avifaune • ambiances sauvages.  
+Observation discrète, respect des distances, attention aux pressions sur les milieux.
 </div>
