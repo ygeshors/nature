@@ -1,4 +1,4 @@
-/* ===== Yann Nature — Header PRO V2 (Just the Docs) ===== */
+/* ===== Yann Nature — Header PRO V2.1 (anti-chevauchement) ===== */
 
 /* Full width content */
 .main-content-wrap { max-width: 100% !important; }
@@ -6,6 +6,8 @@
 
 /* Hero */
 .hero { margin: 18px 0 34px; }
+
+/* Bannière */
 .hero-banner{
   width: 100%;
   height: 240px;
@@ -14,25 +16,43 @@
   display:block;
 }
 
-.hero-inner{
-  display:flex;
-  gap: 26px;
-  align-items: center;
-  margin-top: -48px;
-  padding: 0 14px;
-  flex-wrap: wrap;
+/* ✅ Ajoute un “espace tampon” sous la bannière
+   pour éviter que le logo/texte ne chevauchent */
+.hero::after{
+  content:"";
+  display:block;
+  height: 70px; /* ajuste si besoin */
 }
 
-/* Logo card */
+/* Contenu sous bannière */
+.hero-inner{
+  display:flex;
+  gap: 22px;
+  align-items: center;
+
+  /* ✅ on ne remonte plus la section dans la bannière */
+  margin-top: -60px;  /* était -48 : ici on contrôle avec le tampon */
+  padding: 0 14px;
+  flex-wrap: wrap;
+
+  /* ✅ le bloc passe au-dessus du fond avec un rendu clean */
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo */
 .hero-logo{
   background: white;
   border-radius: 18px;
-  padding: 14px;
+  padding: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  flex: 0 0 auto;
 }
+
+/* ✅ taille maîtrisée + jamais trop grand */
 .hero-logo img{
-  width: 160px;         /* ✅ logo maîtrisé */
-  max-width: 42vw;
+  width: 140px;         /* ↓ réduit un peu */
+  max-width: 34vw;
   height: auto;
   display:block;
 }
@@ -97,6 +117,10 @@
 @media (max-width: 900px){
   .grid{ grid-template-columns: 1fr; }
   .hero-banner{ height: 200px; }
-  .hero-inner{ margin-top: -34px; }
-  .hero-logo img{ width: 130px; }
+
+  /* ✅ sur mobile : plus de “remontée” du bloc, zéro chevauchement */
+  .hero::after{ height: 16px; }
+  .hero-inner{ margin-top: 12px; }
+
+  .hero-logo img{ width: 120px; }
 }
