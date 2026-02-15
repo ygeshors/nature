@@ -1,14 +1,15 @@
-theme: theme: jekyll-theme-cayman
 title: Nature
 description: Site nature et biodiversité
+
+remote_theme: just-the-docs/just-the-docs
+
+github:
+  is_project_page: false
 
 header_pages:
   - projets.md
   - photos.md
   - contact.md
-
-github:
-  is_project_page: false
 
 permalink: pretty
 show_downloads: false
