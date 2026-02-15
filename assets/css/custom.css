@@ -1,119 +1,107 @@
-/* -----------------------------
-   Yann Nature — Header PRO V1
-   Compatible Just-the-Docs
------------------------------- */
+/* ============================= */
+/* HEADER IMMERSIF YANN NATURE   */
+/* ============================= */
 
-/* Typo Barlow (si déjà importée ailleurs, tu peux supprimer ces 2 lignes) */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;800&display=swap');
-
-body {
-  font-family: "Barlow", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+.yn-hero{
+  position:relative;
+  width:100%;
+  height:320px;
+  overflow:hidden;
+  border-radius:14px;
+  margin-bottom:30px;
 }
 
-/* Container de la HERO */
-.yn-hero {
-  position: relative;
-  overflow: hidden;
-  border-radius: 22px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 18px 40px rgba(0,0,0,.08);
-  background: #0b1220;
+.yn-hero__bg{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-/* Image de fond (bannière) */
-.yn-hero__bg {
-  display: block;
-  width: 100%;
-  height: 320px;           /* ajuste si tu veux plus haut */
-  object-fit: cover;
-  filter: saturate(1.05);
+.yn-hero__veil{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,
+  rgba(0,0,0,0.05),
+  rgba(0,0,0,0.35));
 }
 
-/* Voile léger pour lisibilité des boutons (sans texte sur bannière) */
-.yn-hero__veil {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.05));
-  pointer-events: none;
-}
-
-/* Logo rond posé sur la bannière */
-.yn-hero__logo {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  width: 108px;
-  height: 108px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.92);
-  border: 1px solid rgba(255,255,255,.75);
-  box-shadow: 0 16px 36px rgba(0,0,0,.18);
-  display: grid;
-  place-items: center;
+/* Logo rond */
+.yn-hero__logo{
+  position:absolute;
+  bottom:-60px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
 }
 
 .yn-hero__logo img{
-  width: 92%;
-  height: 92%;
-  object-fit: contain;
-  border-radius: 999px;
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
-/* Zone boutons (en bas à gauche) */
-.yn-hero__actions {
-  position: absolute;
-  left: 18px;
-  bottom: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* Boutons header */
+.yn-hero__actions{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  display:flex;
+  gap:10px;
 }
 
-/* Boutons */
-.yn-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.14);
-  color: #ffffff !important;
-  text-decoration: none !important;
-  font-weight: 800;
-  backdrop-filter: blur(8px);
-  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+.yn-btn{
+  background:rgba(255,255,255,0.9);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:14px;
+  text-decoration:none !important;
+  color:#333;
+  font-weight:500;
+  transition:all .2s ease;
 }
 
 .yn-btn:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.20);
-  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  background:#e7f5ec;
 }
 
 .yn-btn--primary{
-  background: rgba(20,83,45,.75); /* vert nature */
-  border-color: rgba(255,255,255,.25);
+  background:#2e8b57;
+  color:white !important;
 }
 
-.yn-btn--primary:hover{
-  background: rgba(6,78,59,.85);
+/* ============================= */
+/* GRID CARTES                   */
+/* ============================= */
+
+.yn-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+  margin-top:15px;
 }
 
-/* Variante claire (si jamais) */
-.yn-btn--light{
-  background: rgba(255,255,255,.85);
-  color: #0b1220 !important;
-  border-color: rgba(0,0,0,.08);
-}
-.yn-btn--light:hover{
-  background: rgba(255,255,255,.95);
+.yn-card{
+  background:#f8f9fb;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 1px 6px rgba(0,0,0,0.05);
+  transition:.2s ease;
 }
 
-/* Responsive */
-@media (max-width: 640px){
-  .yn-hero__bg{ height: 260px; }
-  .yn-hero__logo{ width: 88px; height: 88px; }
-  .yn-hero__actions{ left: 12px; bottom: 12px; }
-  .yn-hero__logo{ right: 12px; bottom: 12px; }
+.yn-card:hover{
+  transform:translateY(-2px);
+}
+
+/* Bloc vert */
+.yn-highlight{
+  background:#e8f3ec;
+  border-left:4px solid #2e8b57;
+  padding:14px 18px;
+  border-radius:8px;
 }
