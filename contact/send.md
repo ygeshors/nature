@@ -11,12 +11,27 @@ nav_exclude: true
   margin:auto;
 }
 
+/* BOUTON RETOUR */
+.back{
+  display:inline-block;
+  margin-bottom:14px;
+  text-decoration:none !important;
+  font-weight:700;
+  opacity:.8;
+}
+
+.back:hover{
+  opacity:1;
+}
+
+/* FORMULAIRE */
 .form{
   margin-top:14px;
   border:1px solid #e5e7eb;
-  border-radius:16px;
-  padding:20px;
-  background:#ffffff;
+  border-radius:18px;
+  padding:22px;
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
 }
 
 label{
@@ -28,7 +43,7 @@ label{
 input, textarea{
   width:100%;
   border:1px solid #e5e7eb;
-  border-radius:12px;
+  border-radius:14px;
   padding:12px;
   font-size:1rem;
   font-family:inherit;
@@ -39,18 +54,20 @@ textarea{
 }
 
 button{
-  margin-top:16px;
-  padding:12px 18px;
-  border-radius:14px;
+  margin-top:18px;
+  padding:14px 20px;
+  border-radius:16px;
   border:1px solid #e5e7eb;
-  background:#111827;
+  background:#14532d;
   color:#fff;
   font-weight:900;
   cursor:pointer;
+  transition:.2s;
 }
 
 button:hover{
-  background:#0b1220;
+  background:#064e3b;
+  transform:translateY(-2px);
 }
 
 .small{
@@ -61,6 +78,8 @@ button:hover{
 </style>
 
 <div class="wrap">
+
+<a class="back" href="{{ "/" | relative_url }}">← Retour à l’accueil</a>
 
 # ✉️ Envoyer un message
 
@@ -81,9 +100,14 @@ Question, collaboration photo ou signalement naturaliste.
 <label>Message</label>
 <textarea name="message" required></textarea>
 
-<button type="submit">Envoyer le message</button>
+<button type="submit">🌿 Envoyer le message</button>
 
 </form>
 
 </div>
+
+<br>
+
+<a class="back" href="{{ "/" | relative_url }}">← Retour à l’accueil</a>
+
 </div>
