@@ -1,7 +1,7 @@
 ---
 ---
 
-/* ===== Yann Nature — CINEMA FULL WIDTH (SCSS compilé) ===== */
+/* ===== Yann Nature — CINEMA FULL WIDTH ===== */
 
 /* pleine largeur */
 .main-content-wrap { 
@@ -14,7 +14,7 @@
   padding: 0 18px;
 }
 
-/* bannière full width */
+/* bannière */
 .cinema-banner{
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -24,7 +24,7 @@
   display:block;
 }
 
-/* strip 4 photos */
+/* strip photos */
 .photo-strip{
   display:grid;
   grid-template-columns: repeat(4,1fr);
