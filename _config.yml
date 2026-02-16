@@ -18,11 +18,11 @@ last_edit_timestamp: false
 
 aux_links:
   "📸 Photos":
-    - "/nature/photos/"
+    - "{{ '/photos/' | relative_url }}"
   "🗒️ Carnet":
-    - "/nature/carnet/"
+    - "{{ '/carnet/' | relative_url }}"
   "📬 Contact":
-    - "/nature/contact/"
+    - "{{ '/contact/' | relative_url }}"
 
 just_the_docs:
   custom_css:
