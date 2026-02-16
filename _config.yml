@@ -21,16 +21,19 @@ footer_content: ""
 gh_edit_link: false
 last_edit_timestamp: false
 
-# Liens rapides en haut à droite
+# Liens rapides en haut à droite (✅ compatibles avec /nature/)
 aux_links:
   "📸 Photos":
-    - "/photos/"
+    - "{{ '/photos/' | relative_url }}"
   "🗒️ Carnet":
-    - "/carnet/"
+    - "{{ '/carnet/' | relative_url }}"
   "📬 Contact":
-    - "/contact/"
+    - "{{ '/contact/' | relative_url }}"
 
-# CSS perso (CHEMIN IMPORTANT)
+# (Optionnel) ouvrir les liens en nouvel onglet
+# aux_links_new_tab: true
+
+# CSS perso
 just_the_docs:
   custom_css:
     - "assets/css/custom.css"
