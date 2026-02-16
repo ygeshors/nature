@@ -3,8 +3,8 @@ description: Carnet naturaliste • photos • terrain
 
 remote_theme: just-the-docs/just-the-docs
 
-url: "https://ygeshors.github.io"
-baseurl: "/nature"
+url: "https://yann-nature.eu.org"
+baseurl: ""
 
 color_scheme: light
 search_enabled: true
