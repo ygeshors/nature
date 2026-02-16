@@ -1,0 +1,142 @@
+---
+---
+
+/* ===== Yann Nature — CINEMA FIX PRO ===== */
+
+/* -------- CONTENU LARGE -------- */
+.main-content-wrap {
+  max-width: 100% !important;
+}
+
+.page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -------- BANNIERE FULL WIDTH PRO -------- */
+.cinema-banner{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  height: 360px;
+  object-fit: cover;
+  display:block;
+}
+
+/* -------- STRIP PHOTO -------- */
+.photo-strip{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:-60px;
+  margin-bottom:30px;
+  position:relative;
+  z-index:5;
+}
+
+.photo-strip img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* -------- CARTE HERO -------- */
+.cinema-card{
+  margin:0 auto 36px;
+  max-width:840px;
+  background:#ffffff;
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 24px 60px rgba(0,0,0,.18);
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:20px;
+}
+
+/* -------- LOGO ROND -------- */
+.cinema-logo{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.08);
+  background:#fff;
+}
+
+.cinema-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* -------- TITRE -------- */
+.cinema-text h1{
+  margin:0 0 10px;
+  font-size:32px;
+  font-weight:700;
+}
+
+.cinema-text p{
+  line-height:1.65;
+  opacity:.85;
+  text-align:justify;
+}
+
+/* -------- BOUTONS -------- */
+.btn{
+  padding:10px 14px;
+  border-radius:12px;
+  text-decoration:none !important;
+  font-weight:600;
+  border:1px solid rgba(0,0,0,.1);
+}
+
+.btn-dark{background:#14181f;color:#fff !important;}
+.btn-light{background:#fff;color:#14181f !important;}
+.btn-green{background:#76c043;color:#fff !important;border:none;}
+
+/* -------- CARDS -------- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 30px rgba(0,0,0,.08);
+}
+
+/* -------- NOTE -------- */
+.note{
+  background:#f3fbf1;
+  border:1px solid rgba(118,192,67,.35);
+  border-radius:14px;
+  padding:16px;
+}
+
+/* -------- RESPONSIVE -------- */
+@media(max-width:900px){
+
+  .cinema-card{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .photo-strip{
+    flex-wrap:wrap;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
