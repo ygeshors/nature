@@ -1,32 +1,38 @@
-/* ===== Yann Nature — CINEMA V4 PRO ===== */
+/* ===== Yann Nature — CINEMA FIX PRO ===== */
 
-/* ---------- FULL WIDTH ---------- */
+/* -------- CONTENU LARGE -------- */
 .main-content-wrap {
   max-width: 100% !important;
 }
 
 .page-content {
-  max-width: 1320px;   /* plus large */
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 24px;
 }
 
-/* ---------- BANNIÈRE CINÉMA ---------- */
+/* -------- BANNIERE FULL WIDTH PRO -------- */
 .cinema-banner{
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-  height:360px;
-  object-fit:cover;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  height: 360px;
+  object-fit: cover;
   display:block;
 }
 
-/* ---------- STRIP PHOTO ---------- */
+/* -------- STRIP PHOTO -------- */
 .photo-strip{
   display:flex;
   justify-content:center;
   gap:14px;
-  margin-top:-40px;   /* remonte sous la bannière */
-  margin-bottom:24px;
+  margin-top:-60px;
+  margin-bottom:30px;
+  position:relative;
+  z-index:5;
 }
 
 .photo-strip img{
@@ -34,23 +40,23 @@
   height:120px;
   object-fit:cover;
   border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-/* ---------- CARTE HERO ---------- */
+/* -------- CARTE HERO -------- */
 .cinema-card{
-  margin:0 auto 34px;
-  max-width:820px;
+  margin:0 auto 36px;
+  max-width:840px;
   background:#ffffff;
   border-radius:20px;
-  padding:22px;
-  box-shadow:0 22px 50px rgba(0,0,0,.18);
+  padding:24px;
+  box-shadow:0 24px 60px rgba(0,0,0,.18);
   display:grid;
   grid-template-columns:110px 1fr;
-  gap:18px;
+  gap:20px;
 }
 
-/* ---------- LOGO ROND ---------- */
+/* -------- LOGO ROND -------- */
 .cinema-logo{
   width:110px;
   height:110px;
@@ -66,7 +72,7 @@
   object-fit:contain;
 }
 
-/* ---------- TEXTE HERO ---------- */
+/* -------- TITRE -------- */
 .cinema-text h1{
   margin:0 0 10px;
   font-size:32px;
@@ -79,7 +85,7 @@
   text-align:justify;
 }
 
-/* ---------- BOUTONS ---------- */
+/* -------- BOUTONS -------- */
 .btn{
   padding:10px 14px;
   border-radius:12px;
@@ -92,11 +98,11 @@
 .btn-light{background:#fff;color:#14181f !important;}
 .btn-green{background:#76c043;color:#fff !important;border:none;}
 
-/* ---------- GRILLE CARDS ---------- */
+/* -------- CARDS -------- */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:22px;
 }
 
 .card{
@@ -106,7 +112,7 @@
   box-shadow:0 14px 30px rgba(0,0,0,.08);
 }
 
-/* ---------- NOTE ---------- */
+/* -------- NOTE -------- */
 .note{
   background:#f3fbf1;
   border:1px solid rgba(118,192,67,.35);
@@ -114,7 +120,7 @@
   padding:16px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* -------- RESPONSIVE -------- */
 @media(max-width:900px){
 
   .cinema-card{
